@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Bootstrap 5 - GitHub Pages</title>
+  <!-- Enlace completo a CSS de Bootstrap 5.3 -->
+  <link href="https://jsdelivr.net" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+
+
+
+<body class="bg-light">
+
+  <!—1 COMPONENTE DE NAVEGACIÓN: Navbar wooow esto fue todo copiando y pegando!! ;) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MiWebGit <span class="badge bg-primary">Bootstrap 5</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#componentes">Componentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#datos">Datos y Formulario</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL            -->
+    <main class="container my-5" id="inicio">
+
+      <!—2 COMPONENTE DE FEEDBACK alert -->
+        <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+          <strong>¡Despliegue exitoso!</strong> Esta página está lista para funcionar en GitHub Pages.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- SECCIÓN HERO     - espaciado, bordes alineación -->
+        <section class="p-5 mb-5 bg-white rounded-3 border shadow-sm text-center">
+          <h1 class="display-5 fw-bold text-dark">Práctica de Estructura y Componentes</h1>
+          <p class="fs-5 text-secondary col-md-8 mx-auto my-3">
+            Diseño responsivo construido con el sistema de cuadrícula (Grid) y utilidades nativas de Bootstrap 5 sin CSS
+            externo.
+          </p>
+          <div class="d-flex justify-content-center gap-2">
+            <!—3 COMPONENTE DE ACCIÓN: Button , Modal Trigger -->
+              <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#miModal">
+                Probar Modal
+              </button>
+              <a href="#componentes" class="btn btn-outline-secondary btn-lg">Ver Componentes</a>
+          </div>
+        </section>
+
+        <!-- SISTEMA DE CUADRÍCULA : 3 colu -->
+        <section class="row g-4 mb-5" id="componentes">
+
+          <!—4 COMPONENTE DE CONTENEDOR: Card + Progress Bar -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <!-- Cabecera visual con utilidades de color y flex -->
+                <div class="bg-primary text-white d-flex align-items-center justify-content-center rounded-top"
+                  style="height: 160px;">
+                  <span class="fs-3 fw-bold">Tarjeta (Card)</span>
+                </div>
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Contenedor Flexible</h5>
+                  <p class="card-text text-muted">Agrupa títulos, bloques de texto, enlaces e indicadores de estado en
+                    una estructura ordenada.</p>
+                  <div class="mt-auto pt-3 border-top">
+                    <div class="d-flex justify-content-between small mb-1">
+                      <span>Progreso del diseño</span>
+                      <span class="fw-bold">85%</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!—5 COMPONENTE DE LISTA: List Group y Bad -->
+              <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                  <div class="card-header bg-white fw-bold py-3">
+                    Utilidades Aplicadas (List Group)
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                      Márgenes y Rellenos (my-5, p-5)
+                      <span class="badge bg-primary rounded-pill">Espaciado</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                      Flexbox (d-flex, gap-2)
+                      <span class="badge bg-info text-dark rounded-pill">Alineación</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                      Sombras y Bordes (shadow-sm)
+                      <span class="badge bg-secondary rounded-pill">Estilo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                      Tipografía (display-5, fw-bold)
+                      <span class="badge bg-dark rounded-pill">Texto</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 6. COMPONENTE INTERACT      Accordion -->
+              <div class="col-md-4">
+                <div class="accordion shadow-sm" id="acordeonBootstrap">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelUno" aria-expanded="true">
+                        1. Sistema de Rejilla (Grid)
+                      </button>
+                    </h2>
+                    <div id="panelUno" class="accordion-collapse collapse show" data-bs-parent="#acordeonBootstrap">
+                      <div class="accordion-body text-secondary">
+                        Divide el ancho de la pantalla en <strong>12 columnas</strong> usando contenedores
+                        <code>.row</code> y clases responsivas como <code>.col-md-4</code>.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelDos" aria-expanded="false">
+                        2. Componentes JavaScript
+                      </button>
+                    </h2>
+                    <div id="panelDos" class="accordion-collapse collapse" data-bs-parent="#acordeonBootstrap">
+                      <div class="accordion-body text-secondary">
+                        Elementos como este acordeón, el menú móvil, las alertas y las ventanas modales funcionan
+                        mediante atributos <code>data-bs-*</code>.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelTres" aria-expanded="false">
+                        3. Publicación en GitHub
+                      </button>
+                    </h2>
+                    <div id="panelTres" class="accordion-collapse collapse" data-bs-parent="#acordeonBootstrap">
+                      <div class="accordion-body text-secondary">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </section>
+
+        <!-- SEGUNDA FILA             Tabla y Form    -->
+        <section class="row g-4" id="datos">
+
+          <!-- 7. CONTENIDO TAB Table -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded-3 border shadow-sm h-100">
+              <h4 class="mb-3 fw-bold">Resumen de Componentes</h4>
+              <div class="table-responsive">
+                <table class="table table-striped table-hover align-middle mb-0">
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Componente</th>
+                      <th>Tipo</th>
+                      <th>Estado</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Navbar y Badges</td>
+                      <td>Navegación</td>
+                      <td><span class="badge bg-success">Incluido</span></td>
+                    </tr>
+                    <tr>
+                      <td>Card y List Group</td>
+                      <td>Contenedores</td>
+                      <td><span class="badge bg-success">Incluido</span></td>
+                    </tr>
+                    <tr>
+                      <td>Accordion y Modal</td>
+                      <td>Interactivo</td>
+                      <td><span class="badge bg-success">Incluido</span></td>
+                    </tr>
+                    <tr>
+                      <td>Table y Form</td>
+                      <td>Datos / Entrada</td>
+                      <td><span class="badge bg-success">Incluido</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!--  COMPONENTE DE ENTRADA            Form -->
+          <div class="col-lg-6">
+            <div class="bg-white p-4 rounded-3 border shadow-sm h-100">
+              <h4 class="mb-3 fw-bold">Formulario de Contacto</h4>
+              <form onsubmit="event.preventDefault(); alert('Formulario validado correctamente.');">
+                <div class="mb-3">
+                  <label for="nombreUsuario" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombreUsuario" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="categoriaSelect" class="form-label">Categoría favorita</label>
+                  <select class="form-select" id="categoriaSelect">
+                    <option value="grid">Sistema de Cuadrícula (Grid)</option>
+                    <option value="componentes">Componentes Visuales (Cards, Navbars)</option>
+                    <option value="utilidades">Utilidades Rápidas (Espaciado, Color)</option>
+                  </select>
+                </div>
+                <div class="form-check form-switch mb-3">
+                  <input class="form-check-input" type="checkbox" id="checkTerminos" checked>
+                  <label class="form-check-label" for="checkTerminos">Activar notificaciones de prueba</label>
+                </div>
+                <button type="submit" class="btn btn-dark w-100">Enviar Formulario</button>
+              </form>
+            </div>
+          </div>
+
+        </section>
+    </main>
+
+    <!—FOOT la parte de abajo, el pie-->
+      <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+          <p class="mb-0 small text-secondary">Estructura creada con Bootstrap 5.3 • Alojada en GitHub Pages</p>
+        </div>
+      </footer>
+
+      <!--  COMPONENTE SUPERPUESTO       Modal -->
+      <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="tituloModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title fw-bold" id="tituloModal">Ventana Modal de Bootstrap</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+              Este componente superpuesto funciona gracias al archivo JavaScript incluido al final del documento.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enlace completo a JS Bundle de Bootstrap 5.3 esto es importante, la versión qie tengo -->
+      <script src="https://jsdelivr.net"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
