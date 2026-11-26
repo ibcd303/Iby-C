@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>¡Hola! ¿Cómo te llamas?</h1>
+    
+    <!-- Este formulario envía los datos a la ruta /guardar -->
+    <form action="/guardar" method="POST">
+        <input type="text" name="nombreUsuario" placeholder="Escribe tu nombre aquí" required>
+        <button type="submit">Guardar en sesión</button>
+    </form>
+</body>
+</html>
+
